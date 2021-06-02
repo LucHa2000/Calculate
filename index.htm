@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+    <style>
+            body{
+                  
+
+            }
+            .app{
+                    display: flex;
+                    justify-content:center;
+                    align-items: center;
+                    flex-direction: column;
+                   
+                
+            }
+            .app-calculate{
+                    width: 430px;
+                    height: 530px;
+                    background-color:rgb(151, 153, 153);
+                    margin-top:90px;
+                    border-radius:10px;
+            }
+            .display{
+                margin-top:50px;
+            }
+            .row-flex{
+                display: flex;
+                
+            }
+          
+          input[type="button"]{
+              width: 100%;
+              height: 100%;
+              font-size:30px;
+              cursor: pointer;
+              background-color:#F9F9F9;
+              border-radius:20px;
+          }
+          input[type="button"]:hover{
+              background-color:rgb(172, 168, 168);
+          }
+
+          input{
+              width: 98%;
+              height: 100%;
+              font-size:30px;
+             
+          }
+          .col {
+              width: 100%;
+              height:50px;
+              padding:10px 10px;
+          }
+          h1{
+              text-align: center;
+          }
+    </style>
+            <div class="app">   
+                  
+                 <div class="container app-calculate">
+                     <h1 class="">My Calculator</h1>
+                    <div class="display">
+                        <input type="text" id="display-result">
+                    </div> 
+                     <div class="row row-flex">
+                         <div class="col" >                      
+                                 <input type="button" value="+" onclick="dis('+')">
+                         </div>
+                         <div class="col" >
+                            <input type="button" value="-"  onclick="dis('+')" >
+                            
+                        </div>
+                        <div class="col" >
+                            <input type="button" value="X" onclick="dis('*')">
+                            
+                        </div>
+                        <div class="col" >
+                            <input type="button" value="/" onclick="dis('/')">
+                            
+                        </div>
+                     </div>
+                     <div class="row row-flex">
+                        <div class="col" >                      
+                                <input type="button" value="7" onclick="dis('7')">
+                        </div>
+                        <div class="col" >
+                           <input type="button" value="8" onclick="dis('8')">
+                           
+                       </div>
+                       <div class="col" >
+                           <input type="button" value="9" onclick="dis('9')">
+                           
+                       </div>
+                       <div class="col" >
+                           <input style="background-color:#4E8FFE" type="button" value="=" onclick="equals()">
+                           
+                       </div>
+                    </div>
+                    <div class="row row-flex">
+                        <div class="col" >                      
+                                <input type="button" value="4" onclick="dis('4')">
+                        </div>
+                        <div class="col" >
+                           <input type="button" value="5" onclick="dis('5')">
+                           
+                       </div>
+                       <div class="col" >
+                           <input type="button" value="6" onclick="dis('6')">
+                           
+                       </div>
+                      
+                    </div>
+                    <div class="row row-flex">
+                        <div class="col" >                      
+                                <input type="button" value="1">
+                        </div>
+                        <div class="col" >
+                           <input type="button" value="2">
+                           
+                       </div>
+                       <div class="col" >
+                           <input type="button" value="3">
+                           
+                       </div>
+                      
+                    </div>
+                    <div class="row row-flex">
+                        <div class="col" >                      
+                                <input type="button" value="0" onclick="dis('0')">
+                        </div>
+                        <div class="col" >
+                           <input type="button" value="." onclick="dis('.')">
+                           
+                       </div>
+                       <div class="col" >
+                           <input type="button" value="C"  onclick="del()">
+                           
+                       </div>
+                      
+                    </div>
+                 </div>
+
+            </div>
+
+
+
+    <script >
+            function del(){
+                document.getElementById("display-result").value= "";
+                
+            }
+            function dis(rs){
+                document.getElementById("display-result").value+=rs+" ";
+            }
+            function equals(){
+                    let x= document.getElementById("display-result").value;
+                    let y= eval(x);
+                    document.getElementById("display-result").value=y;
+            }
+        
+    </script>
+    
+</body>
+
+</html>

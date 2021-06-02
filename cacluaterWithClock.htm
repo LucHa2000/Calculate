@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+            body{
+                    display: flex;
+                    justify-content:center;
+                    align-items: center;
+                    transform:translateY(50%);
+                    margin:auto 0;
+                    width: 100%;
+                    height: 100%;
+            }
+            .container{
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                width: 800px;
+                height: 400px;
+                justify-content:center;
+                margin:auto 0;
+                position: relative;
+            
+                background-color:aqua;
+                    
+            }
+            .container .btn{
+                position: absolute;
+                padding:10px 50px;
+                font-size:10px;
+                color:#fff;
+                background-color:black;
+                border-radius:10px;
+                outline:none;
+                cursor: pointer;
+                font-weight:bold;
+                
+            }
+            .container .btn-1{
+                position: absolute;
+                padding:10px 50px;
+                font-size:10px;
+                color:#fff;
+                background-color:black;
+                border-radius:10px;
+                outline:none;
+                cursor: pointer;
+                font-weight:bold;
+                
+            }
+            .group-div{
+                display: flex;
+                flex-direction: row;
+            }
+             input{
+                padding: 10px;
+                width: 30px;
+            }
+    </style>
+
+
+    <div class="container">
+        <h1 style="transform:translateY(-120px);text-align: center;"> Calculator</h1>
+        <div class="group-input">
+            <input type="text" class="valueA">
+           
+            <input type="text" class="x">
+       
+            <input type="text" class="valueB">
+     
+             </div>
+           
+            <button class="btn" onclick="calculate()">
+                 Result
+            </button>
+        
+       
+    </div>
+
+    <script >
+             
+      
+        function myMove() {
+            var elem = document.querySelector('.btn');
+                          elem.style.top = Math.random()*200 + "px";
+                            elem.style.right = Math.random()*200 + "px";                       
+              }
+        function calculate(){
+                var valueA= document.querySelector(".valueA").value;
+                var valueB= document.querySelector(".valueB").value;
+                var valueX= document.querySelector(".x").value;
+                if(valueX==="+"){
+                    var all= parseInt(valueA)+ parseInt(valueB);
+                  alert(valueA+ "+" + valueB+ "=" + all);
+                }
+            }
+        
+    </script>
+    
+</body>
+</html>
